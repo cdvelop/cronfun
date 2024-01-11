@@ -1,3 +1,10 @@
 package cronfunc
 
-type Cronfunc struct {}
+import (
+	"github.com/mileusna/crontab"
+)
+
+type cronFunc struct {
+	*crontab.Crontab
+	registered map[string]string
+}
